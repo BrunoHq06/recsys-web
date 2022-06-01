@@ -8,8 +8,8 @@ def get_rec_data():
     cwd = os.getcwd()
 
     #Vou usar um dataset oriundo do site my anime list para criar o sistema de recomendação de animes.
-    df_anime = pd.read_csv(cwd + r"\data\raw\item.csv")
-    df_ratings = pd.read_csv(cwd + r"\data\raw\rating.csv")
+    df_anime = pd.read_csv("item.csv")
+    df_ratings = pd.read_csv("rating.csv")
 
     #alguns caras vieram com rating -1, retirei eles da base
     #df_ratings = df_ratings[df_ratings['rating'] >0]
@@ -57,15 +57,13 @@ def get_rec_data():
     return df_bkp
 
 def get_anime():
-    import os
-    cwd = os.getcwd()
-    df_anime = pd.read_csv(cwd + r"\data\raw\item.csv")
+    df_anime = pd.read_csv("item.csv")
     return df_anime
 
 def get_rating():
     import os
     cwd = os.getcwd()
-    df_ratings = pd.read_csv(cwd + r"\data\raw\rating.csv")
+    df_ratings = pd.read_csv("rating.csv")
     return df_ratings
 
 def generate_matrix(data,csr=True):
