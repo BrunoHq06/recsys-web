@@ -157,5 +157,3 @@ dependencies:
     - m2w64-libwinpthread-git=5.0.0.4634.697f757
     - m2w64-gcc-libs=5.3.0
     - m2w64-gmp=6.1.0
-	
-prefix: C:\Users\bruno\anaconda3\envs\recsys
