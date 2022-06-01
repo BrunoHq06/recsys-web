@@ -57,13 +57,15 @@ def get_rec_data():
     return df_bkp
 
 def get_anime():
-    my_anime = r'C:\Users\bruno\Desktop\recsys\scr\data\raw\item.csv'
-    df_anime = pd.read_csv(my_anime)
+    import os
+    cwd = os.getcwd()
+    df_anime = pd.read_csv(cwd + r"\data\raw\item.csv")
     return df_anime
 
 def get_rating():
-    my_user = r'C:\Users\bruno\Desktop\recsys\scr\data\raw\rating.csv'
-    df_ratings = pd.read_csv(my_user)
+    import os
+    cwd = os.getcwd()
+    df_ratings = pd.read_csv(cwd + r"\data\raw\rating.csv")
     return df_ratings
 
 def generate_matrix(data,csr=True):
